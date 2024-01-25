@@ -1,6 +1,6 @@
 const apiKey: string = "5a7531a791704bb4b24befa4738dd37c";
 
-export const imageBaseUrl= (size:string,path :string) => `https://image.tmdb.org/t/p/${size}${path}`
+export const baseImagePath= (size:string,path :string) => `https://image.tmdb.org/t/p/${size}${path}`
 
 export const nowPlayingMovies: string = `
 
