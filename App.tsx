@@ -22,10 +22,10 @@ function App(): React.JSX.Element {
         <Stack.Screen name="Tab" component={TabNavigator} options={{
           animation : 'default',
         }} />
-        <Stack.Screen name="MoiveDetails" component={MoiveDetailScreen} options={{
+        <Stack.Screen name="MovieDetails" component={MoiveDetailScreen} options={{
           animation:'slide_from_right',
         }}  />
-        <Stack.Screen name="SeatBookings" component={SeatBookingScreen} options={{
+        <Stack.Screen name="SeatBooking" component={SeatBookingScreen} options={{
           animation:'slide_from_bottom',
         }}  />
       </Stack.Navigator>
