@@ -2,7 +2,7 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-nativ
 import React, { useState } from 'react'
 import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/theme';
 import CustomIcon from './CustomIcon';
-export default function InputHeader({handleSearchIconPress}:any) {
+export default function InputHeader({ searchFunction }:any) {
   const [searchText, setSearchText] = useState<string>('');
   return (
     <View style={styles.inputBox}>
@@ -14,9 +14,7 @@ export default function InputHeader({handleSearchIconPress}:any) {
         onChangeText={(text) => setSearchText(text)}
       
       />
-      <TouchableOpacity onPress={
-        () => handleSearchIconPress(searchText)
-      }
+      <TouchableOpacity onPress={searchFunction}
         style={styles.searchIconContainer}
       >
         <CustomIcon name="search" size={FONTSIZE.size_20} color={COLORS.Orange} />
