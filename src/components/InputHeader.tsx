@@ -4,6 +4,9 @@ import { BORDERRADIUS, COLORS, FONTFAMILY, FONTSIZE, SPACING } from '../theme/th
 import CustomIcon from './CustomIcon';
 export default function InputHeader({ searchFunction }:any) {
   const [searchText, setSearchText] = useState<string>('');
+  const handleSearch = () => {
+    searchFunction(searchText);
+  };
   return (
     <View style={styles.inputBox}>
       <TextInput
@@ -12,9 +15,11 @@ export default function InputHeader({ searchFunction }:any) {
         style={styles.textInput}
         value={searchText}
         onChangeText={(text) => setSearchText(text)}
+        returnKeyLabel='search'
+        returnKeyType='search'
       
       />
-      <TouchableOpacity onPress={searchFunction}
+      <TouchableOpacity onPress={handleSearch}
         style={styles.searchIconContainer}
       >
         <CustomIcon name="search" size={FONTSIZE.size_20} color={COLORS.Orange} />

@@ -18,7 +18,7 @@ const SearchScreen = ({ navigation }: any) => {
   const [searchList, setSearchList] = useState([]);
 
   const searchMoviesFunction = async (name: string) => {
-    console.log(searchList);
+  
     try {
       let response = await fetch(searchMovies(name));
       let json = await response.json();
@@ -28,7 +28,7 @@ const SearchScreen = ({ navigation }: any) => {
       console.error('Something went wrong in searchMoviesFunction ', error);
     }
   };
-  console.log(searchList);
+ 
 
   return (
     <View style={styles.container}>
