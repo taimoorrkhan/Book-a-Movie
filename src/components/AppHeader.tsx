@@ -19,8 +19,7 @@ export default function AppHeader({ name, header, action }:any) {
 
 const styles = StyleSheet.create({
   constainer: {
-    flex: 1,
-    display: 'flex',
+   
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
